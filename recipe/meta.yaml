@@ -11,7 +11,7 @@ source:
 
 build:
   number: 0
-  skip: true  # [win or s390x]
+  skip: true  # [win]
   run_exports:
     - {{ pin_subpackage("s2n", max_pin="x.x.x") }}
 
@@ -23,6 +23,9 @@ outputs:
       activate_in_script: true
       run_exports:
         - {{ pin_subpackage("s2n", max_pin="x.x.x") }}
+      missing_dso_whitelist:
+        - '$RPATH/ld64.so.1'  # [s390x]
+
     requirements:
       build:
         - cmake
