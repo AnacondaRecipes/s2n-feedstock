@@ -64,7 +64,7 @@ about:
   doc_url: https://aws.github.io/s2n-tls/doxygen/
   summary: an implementation of the TLS/SSL protocols
   description: |
-    s2n-tls is a C99 implementation of the TLS/SSL protocols that is designed to be simple, small, fast, 
+    s2n-tls is a C99 implementation of the TLS/SSL protocols that is designed to be simple, small, fast,
     and with security as a priority. It is released and licensed under the Apache License 2.0.
 
 extra:
