@@ -5,7 +5,6 @@ set -exo pipefail
 mkdir build-shared
 pushd build-shared
 cmake ${CMAKE_ARGS} -GNinja \
-  -DUNSAFE_TREAT_WARNINGS_AS_ERRORS=OFF \
   -DCMAKE_PREFIX_PATH=$PREFIX \
   -DCMAKE_INSTALL_PREFIX="${PREFIX}" \
   -DCMAKE_INSTALL_LIBDIR=lib \
