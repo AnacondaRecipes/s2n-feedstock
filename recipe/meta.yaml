@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/awslabs/{{ name }}/archive/v{{ version }}.tar.gz
+  url: https://github.com/aws/{{ name }}-tls/archive/refs/tags/v{{ version }}.tar.gz
   sha256: b62c52ededd0b42e58fea660727141728cfb853c564083dbfc6fd027a1564582
 
 build:
@@ -23,8 +23,6 @@ outputs:
       activate_in_script: true
       run_exports:
         - {{ pin_subpackage("s2n", max_pin="x.x.x") }}
-      missing_dso_whitelist:
-        - '$RPATH/ld64.so.1'  # [s390x]
 
     requirements:
       build:
@@ -58,7 +56,7 @@ outputs:
         - test -f $PREFIX/lib/libs2n.a  # [unix]
 
 about:
-  home: https://github.com/awslabs/s2n
+  home: https://github.com/aws/s2n-tls
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE
