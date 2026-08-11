@@ -1,5 +1,5 @@
 {% set name = "s2n" %}
-{% set version = "1.6.2" %}
+{% set version = "1.7.7" %}
 
 package:
   name: {{ name|lower }}-split
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/aws/{{ name }}-tls/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: b62c52ededd0b42e58fea660727141728cfb853c564083dbfc6fd027a1564582
+  sha256: a6f77d2e3343b554bfc2cce27e0407b3c758bb105533c8f0a56e233036b7541d
 
 build:
   number: 0
@@ -23,7 +23,6 @@ outputs:
       activate_in_script: true
       run_exports:
         - {{ pin_subpackage("s2n", max_pin="x.x.x") }}
-
     requirements:
       build:
         - cmake
@@ -66,6 +65,13 @@ about:
   description: |
     s2n-tls is a C99 implementation of the TLS/SSL protocols that is designed to be simple, small, fast,
     and with security as a priority. It is released and licensed under the Apache License 2.0.
+
+
+
+
+
+
+
 
 extra:
   recipe-maintainers:
