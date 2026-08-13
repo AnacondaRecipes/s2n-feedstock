@@ -1,13 +1,13 @@
 {% set name = "s2n" %}
-{% set version = "1.6.2" %}
+{% set version = "1.7.7" %}
 
 package:
-  name: {{ name|lower }}-split
+  name: {{ name }}-split
   version: {{ version }}
 
 source:
   url: https://github.com/aws/{{ name }}-tls/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: b62c52ededd0b42e58fea660727141728cfb853c564083dbfc6fd027a1564582
+  sha256: a6f77d2e3343b554bfc2cce27e0407b3c758bb105533c8f0a56e233036b7541d
 
 build:
   number: 0
